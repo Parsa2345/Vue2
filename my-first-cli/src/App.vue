@@ -1,7 +1,7 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <img alt="Vue logo" src="./assets/logo.png" ref="img1">
   <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <Hello :name="name" :family="family" :phone="33454" @nameClicked="test"  />
+  <Hello :name="name" :family="family" :phone="33454" @nameClicked="testRef"  ref="myCP" />
 </template>
 
 <script>
@@ -18,6 +18,10 @@ export default {
   methods: {
     test(text){
       console.log("object   "+text );
+      this.$refs.img1.remove();
+    },
+    testRef(){  
+      this.$refs.myCP.myAlert2("Hasan");
     }
 
 
