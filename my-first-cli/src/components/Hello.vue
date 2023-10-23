@@ -12,7 +12,13 @@ export default {
         myAlert()
         {
             alert("Click Happened");
-            this.$emit("nameClicked",this.name)
+            this.$emit("nameClicked",this.name) 
+
+            
+        },
+        myAlert2(text)
+        {
+            alert(text);
         }
     },
 };
