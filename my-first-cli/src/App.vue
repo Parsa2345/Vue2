@@ -1,7 +1,12 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" ref="img1">
   <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <Hello :name="name" :family="family" :phone="33454" @nameClicked="testRef"  ref="myCP" />
+  <Hello :name="name" :family="family" :phone="33454" @nameClicked="testRef"  ref="myCP">
+  
+  <template v-slot:name><h1>{{name}}</h1></template>
+  <template v-slot:family><h1>{{family}}</h1></template>
+  <template v-slot:phone><h1>1232314</h1></template>
+  </Hello>
 </template>
 
 <script>
