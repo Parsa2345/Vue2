@@ -1,5 +1,5 @@
 <template>
-    <teleport to="modals">    </teleport>
+   
         <div class="modal">
             <slot name="name"></slot>
             <slot name="family"></slot>
@@ -26,6 +26,6 @@ export default {
         myAlert2(text) {
             alert(text);
         }
-    },
+    }
 };
 </script>

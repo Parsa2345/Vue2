@@ -3,7 +3,7 @@
   <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   <Hello :name="name" :family="family" :phone="33454" @nameClicked="testRef"  ref="myCP">
   
-  <template v-slot:name><h1>{{name}}</h1></template>
+  <template v-slot:name><h1  @click="test2">{{name}}</h1></template>
   <template v-slot:family><h1>{{family}}</h1></template>
   <template v-slot:phone><h1>1232314</h1></template>
   </Hello>
@@ -27,7 +27,16 @@ export default {
     },
     testRef(){  
       this.$refs.myCP.myAlert2("Hasan");
-    }
+    }, 
+        test2(){
+            this.name+= "a";
+        }
+    },
+    watch:{
+      name(n,o){
+            console.log(o);
+            console.log(n); 
+        } 
 
 
   },
