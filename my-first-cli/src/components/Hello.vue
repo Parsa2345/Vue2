@@ -1,7 +1,10 @@
 <template>
-    <h1 @click="myAlert">{{name}}</h1>
-    <h1>{{family}}</h1>
-    <h1>{{phone}}</h1>
+    <!-- <slot name="name" @click="myAlert">{{name}}</slot>
+    <slot name="family">{{family}}</slot>
+    <slot name="phone">{{phone}}</slot> -->
+    <slot name="name"></slot>
+    <slot name="family"></slot>
+    <slot name="phone"></slot>
 </template>
 
 <script>
